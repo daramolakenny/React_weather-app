@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+body {
+    background-color: rgb(98, 98, 255);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color: #fff;
+    width: 25rem;
+    cursor: pointer;
+    /* padding: 1rem 8rem; */
+    border-radius: 5px 15px;
+}
+
+h1{
+    font-size: 1.5rem;
+    color: rgb(98, 98, 255);
+    font-weight: 600;
+    padding: 16px 15px;
+    border-bottom: 1px solid rgb(156, 151, 151);
+}
+
+h1:hover {
+    color: rgb(3, 3, 250);
+    border-radius: 0 15px;
+    background-color: #f1f1f1;
+}
+p{
+    /* display: none; */
+    padding: .5rem 0;
+}
+
+.wrapper input {
+    width: 85%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    /* margin-bottom: 1.5rem; */
+    border-radius: 5px;
+}
+
+.emptydiv {
+    width: 85%;
+    height: 1px;
+    margin: 20px auto;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptydiv::before {
+    content: 'or';
+    padding: 0 1rem;
+    color: #ccc;
+    background-color: #fff;
+}
+
+.device {
+    background-color: rgb(98, 98, 255);
+}
+.device::placeholder{
+    color: #fff;
+}
