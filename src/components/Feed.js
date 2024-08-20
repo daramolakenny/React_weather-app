@@ -8,7 +8,7 @@ function Feed() {
   const [message, setMessage] = useState('');
 
   // const apiKey = process.env.REACT_APP_API_KEY;
-  const apiKey = '76ded18f8d90cb715a79528ef535f7ae'
+  const apiKey = 'link not provided'
 
   const clickHandler = () => {
     if (!inpu1) {
