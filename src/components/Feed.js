@@ -8,7 +8,7 @@ function Feed() {
   const [message, setMessage] = useState('');
 
   // const apiKey = process.env.REACT_APP_API_KEY;
-  const apiKey = 'link not provided'
+  const apiKey = '76ded18f8d90cb715a79528ef535f7ae'
 
   const clickHandler = () => {
     if (!inpu1) {
@@ -33,7 +33,7 @@ function Feed() {
         throw new Error(`API Error: ${data.message || 'Unknown Error'}`)
       } else {
         setInpu2(true);
-        setMessage(`Weather in ${inpu1}: ${data.weather[0].description}`);
+        setMessage(`Weather: ${inpu1}: ${data.weather[0].description}`);
       }
     })
     .catch(error => {
@@ -48,14 +48,14 @@ function Feed() {
     })
   }
 
-  // console.error('Error:', error.message); // Log the error message for debugging
-  //     setInpu2(true);
-  //     if (error.message.includes('API error')) {
-  //       setError(error.message);  // Use the error message from the API
-  //     } else {
-  //       setError('An error occurred while fetching the weather data');
-  //     }
-  //     setMessage('');
+  // function getCurrentDate(){
+  //   return new Date().toLocaleDateString('en-us',{
+  //     weekday : 'long',
+  //     month : 'long',
+  //     day : 'numeric',
+  //     year : 'numeric'
+  //   })
+  // }
 
   return (
     <div className='wrapper'>
@@ -63,8 +63,9 @@ function Feed() {
         <h1>Weather App</h1>
         <div>
           {inpu2 && (
-            <div>
+            <div className='inputdiv'>
               <input className='city' type="text" placeholder={error || message} />
+              
             </div>
           )}
           <input className='' value={inpu1} type="text" placeholder='Enter city name' onChange={(e) => setInpu1(e.target.value)} />
