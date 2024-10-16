@@ -5,16 +5,16 @@ export default function Weather() {
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(false);
     const [weatherData, setWeatherData] = useState(null)
-
-    const apiKey = '76ded18f8d90cb715a79528ef535f7ae'
-
+    
     async function fetchWeatherData(param) {
         setLoading(true);
         try {
-            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=${apiKey}`)
+            const secreatKey = process.env.REACT_APP_API_KEY;
+            console.log("secreatkey: ", secreatKey);
+            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=${secreatKey}`)
             
             const data = await res.json();
-            console.log(data)
+             console.log('Fetched data:', data);
             if (data){
                 setWeatherData(data);
                 setLoading(false);
